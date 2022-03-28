@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { GifsService } from 'src/app/gifs/services/gifs.service';
 
@@ -14,6 +15,10 @@ export class SidebarComponent implements OnInit {
     return this.gifsService.history;
   }
 
+  buscar(arg: string){
+    console.log(arg);
+    this.gifsService.gifsSearch(arg);
+  }
   ngOnInit(): void {
   }
 
